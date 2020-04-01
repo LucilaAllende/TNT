@@ -6,43 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".TableroJuego">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="166dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/puntos_1"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="45dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:text="@string/mas"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/editText4"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.329" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="166dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/puntos_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintTop_toBottomOf="@+id/image23" />
+
+    <ImageView
+        android:id="@+id/image23"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:contentDescription="@string/descripcion6"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image22"
+        app:srcCompat="@drawable/ic_tantos_vacio"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageView
+        android:id="@+id/image22"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:contentDescription="@string/descripcion5"
+        app:layout_constraintBottom_toTopOf="@+id/image23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image21"
+        app:srcCompat="@drawable/ic_tantos_vacio" />
+
+    <ImageView
+        android:id="@+id/image21"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:contentDescription="@string/descripcion4"
+        app:layout_constraintBottom_toTopOf="@+id/image22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idnosotros"
+        app:srcCompat="@drawable/ic_tantos_vacio" />
+
+    <ImageView
+        android:id="@+id/image13"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:contentDescription="@string/descripcion3"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/image23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image12"
+        app:srcCompat="@drawable/ic_tantos_vacio" />
+
+    <ImageView
+        android:id="@+id/image12"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:contentDescription="@string/descripcion2"
+        app:layout_constraintBottom_toTopOf="@+id/image13"
+        app:layout_constraintEnd_toStartOf="@+id/image22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image11"
+        app:srcCompat="@drawable/ic_tantos_vacio" />
 
     <TextView
         android:id="@+id/idtruco"
@@ -59,29 +99,56 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/idellos"
         android:layout_width="77dp"
         android:layout_height="34dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
         android:text="@string/titulo_equi1"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toTopOf="@+id/image11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idtruco" />
+        app:layout_constraintTop_toBottomOf="@+id/idtruco"
+        app:layout_constraintVertical_bias="0.39" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/idnosotros"
         android:layout_width="75dp"
         android:layout_height="33dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="109dp"
+        android:layout_marginRight="109dp"
         android:text="@string/titulo_equi2"
+        app:layout_constraintBottom_toTopOf="@+id/image21"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/idtruco" />
+
+    <ImageView
+        android:id="@+id/image11"
+        android:layout_width="110dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginLeft="58dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:contentDescription="@string/descripcion1"
+        app:layout_constraintBottom_toTopOf="@+id/image12"
+        app:layout_constraintEnd_toStartOf="@+id/image21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idellos"
+        app:srcCompat="@drawable/ic_tantos_vacio" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="45dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginRight="143dp"
+        android:text="@string/mas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

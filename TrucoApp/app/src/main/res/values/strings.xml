@@ -3,8 +3,13 @@
     <string name="titulo_inicio">Anotador de Truco!</string>
     <string name="boton_inicio">Jugar</string>
     <string name="titulo_truco">Truco</string>
-    <string name="titulo_equi1">Equipo 1</string>
-    <string name="titulo_equi2">Equipo 2</string>
-    <string name="puntos_1">0</string>
-    <string name="puntos_2">0</string>
+    <string name="mas">+</string>
+    <string name="descripcion1">puntos11</string>
+    <string name="titulo_equi1">Ellos</string>
+    <string name="titulo_equi2">Nosotros</string>
+    <string name="descripcion2">puntos12</string>
+    <string name="descripcion3">puntos13</string>
+    <string name="descripcion4">puntos21</string>
+    <string name="descripcion5">puntos22</string>
+    <string name="descripcion6">puntos23</string>
 </resources>
