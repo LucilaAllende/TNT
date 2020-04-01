@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TrucoApp</string>
+    <string name="titulo_inicio">Anotador de Truco!</string>
+    <string name="boton_inicio">Jugar</string>
+    <string name="titulo_truco">Truco</string>
+    <string name="titulo_equi1">Equipo 1</string>
+    <string name="titulo_equi2">Equipo 2</string>
+    <string name="puntos_1">0</string>
+    <string name="puntos_2">0</string>
+</resources>

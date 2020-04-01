@@ -1,0 +1,2 @@
+rootProject.name='TrucoApp'
+include ':app'
