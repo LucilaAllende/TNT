@@ -7,14 +7,17 @@
     tools:context=".TableroJuego">
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/mas2"
         android:layout_width="45dp"
         android:layout_height="42dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
         android:layout_marginEnd="92dp"
         android:layout_marginRight="92dp"
         android:text="@string/mas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mas1"
         app:layout_constraintTop_toBottomOf="@+id/image23" />
 
     <ImageView
@@ -24,7 +27,7 @@
         android:layout_marginEnd="58dp"
         android:layout_marginRight="58dp"
         android:contentDescription="@string/descripcion6"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/mas2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image22"
         app:srcCompat="@drawable/ic_tantos_vacio"
@@ -63,7 +66,7 @@
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:contentDescription="@string/descripcion3"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/mas1"
         app:layout_constraintEnd_toStartOf="@+id/image23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image12"
@@ -107,8 +110,7 @@
         android:text="@string/titulo_equi1"
         app:layout_constraintBottom_toTopOf="@+id/image11"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idtruco"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintTop_toBottomOf="@+id/idtruco" />
 
     <TextView
         android:id="@+id/idnosotros"
@@ -137,16 +139,16 @@
         app:srcCompat="@drawable/ic_tantos_vacio" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/mas1"
         android:layout_width="45dp"
         android:layout_height="42dp"
         android:layout_marginStart="92dp"
         android:layout_marginLeft="92dp"
-        android:layout_marginEnd="143dp"
-        android:layout_marginRight="143dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginRight="90dp"
         android:text="@string/mas"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/mas2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image13" />
