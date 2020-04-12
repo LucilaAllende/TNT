@@ -103,10 +103,10 @@
 
     <TextView
         android:id="@+id/idellos"
-        android:layout_width="77dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="109dp"
-        android:layout_marginLeft="109dp"
+        android:layout_width="145dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
         android:text="@string/titulo_equi1"
         app:layout_constraintBottom_toTopOf="@+id/image11"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,10 +114,10 @@
 
     <TextView
         android:id="@+id/idnosotros"
-        android:layout_width="75dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginRight="109dp"
+        android:layout_width="145dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="@string/titulo_equi2"
         app:layout_constraintBottom_toTopOf="@+id/image21"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,6 +1,6 @@
 package com.example.trucoapp
 
-
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -9,10 +9,12 @@ import com.example.trucoapp.databinding.TableroJuegoBinding
 class TableroJuego : AppCompatActivity() {
 
     private lateinit var vista: TableroJuegoBinding
-    private var puntajeGeneralEllos: Int = 0
+    private var puntajeGeneralEllos = 0
     private var puntajeGeneralNosotros: Int = 0
-    var puntajeNosotros: Int = 0
-    var puntajeEllos:Int = 0
+    private var puntajeEllos:Int = 0
+    private var puntajeNosotros: Int = 0
+    private var buenasEllos: Int = 0
+    private var buenasNosotros:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +25,36 @@ class TableroJuego : AppCompatActivity() {
 
         vista.mas1.setOnClickListener { ellos() }
         vista.mas2.setOnClickListener { nosotros() }
+    }
 
+    private fun limpiar_tablero_ellos() {
+        vista.image11.setImageResource(R.drawable.ic_tantos_vacio)
+        vista.image12.setImageResource(R.drawable.ic_tantos_vacio)
+        vista.image13.setImageResource(R.drawable.ic_tantos_vacio)
+    }
+
+    private fun limpiar_tablero_nosotros() {
+        vista.image21.setImageResource(R.drawable.ic_tantos_vacio)
+        vista.image22.setImageResource(R.drawable.ic_tantos_vacio)
+        vista.image23.setImageResource(R.drawable.ic_tantos_vacio)
     }
 
     private fun nosotros() {
+
+        if (puntajeGeneralNosotros==15) {
+            buenasNosotros += 1
+            vista.idnosotros.text = "Nosotros estamos en buenas"
+            puntajeGeneralNosotros = 0
+            puntajeNosotros = 0
+            limpiar_tablero_nosotros()
+        }
+
+        if (buenasNosotros == 2) {
+            println("Ganamos nosotros")
+        }
+
         puntajeGeneralNosotros += 1
+
         if(puntajeGeneralNosotros in 1..5){
             responder_click_nosotros(vista.image21)
         }
@@ -57,6 +84,19 @@ class TableroJuego : AppCompatActivity() {
     }
 
     private fun ellos(){
+
+        if (puntajeGeneralEllos==15) {
+            buenasEllos += 1
+            vista.idellos.text = "Ellos están en buenas"
+            puntajeGeneralEllos = 0
+            puntajeEllos = 0
+            limpiar_tablero_ellos()
+        }
+
+        if (buenasEllos == 2) {
+
+        }
+
         puntajeGeneralEllos += 1
         if(puntajeGeneralEllos in 1..5){
             responder_click_ellos(vista.image11)
