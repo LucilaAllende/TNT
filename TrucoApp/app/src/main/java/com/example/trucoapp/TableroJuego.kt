@@ -50,7 +50,9 @@ class TableroJuego : AppCompatActivity() {
         }
 
         if (buenasNosotros == 2) {
-            println("Ganamos nosotros")
+            vista.idnosotros.text = "Ganamos nosotros"
+            vista.mas1.isEnabled = false
+            vista.mas2.isEnabled = false
         }
 
         puntajeGeneralNosotros += 1
@@ -64,6 +66,8 @@ class TableroJuego : AppCompatActivity() {
         if(puntajeGeneralNosotros in 10..15){
             responder_click_nosotros(vista.image23)
         }
+
+
     }
 
     private fun responder_click_nosotros(parametro: ImageView) {
@@ -84,18 +88,6 @@ class TableroJuego : AppCompatActivity() {
     }
 
     private fun ellos(){
-
-        if (puntajeGeneralEllos==15) {
-            buenasEllos += 1
-            vista.idellos.text = "Ellos están en buenas"
-            puntajeGeneralEllos = 0
-            puntajeEllos = 0
-            limpiar_tablero_ellos()
-        }
-
-        if (buenasEllos == 2) {
-
-        }
 
         puntajeGeneralEllos += 1
         if(puntajeGeneralEllos in 1..5){
@@ -124,7 +116,18 @@ class TableroJuego : AppCompatActivity() {
         }
         parametro.setImageResource(recursoImg)
 
+        if (puntajeGeneralEllos==15) {
+            buenasEllos += 1
+            vista.idellos.text = "Ellos están en buenas"
+            puntajeGeneralEllos = 0
+            puntajeEllos = 0
+            limpiar_tablero_ellos()
+        }
+
+        if (buenasEllos == 2) {
+            vista.idellos.text = "Ganaron ellos"
+            vista.mas1.isEnabled = false
+            vista.mas2.isEnabled = false
+        }
     }
-
-
 }
