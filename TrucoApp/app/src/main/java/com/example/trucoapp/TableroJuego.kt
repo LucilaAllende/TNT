@@ -70,7 +70,6 @@ class TableroJuego : AppCompatActivity() {
 
         }
         parametro.setImageResource(recursoImg)
-
         comprobar_tantos_nosotros()
         comprobar_buenas_nosotros()
     }
@@ -121,7 +120,6 @@ class TableroJuego : AppCompatActivity() {
 
         }
         parametro.setImageResource(recursoImg)
-
         comprobar_tantos_ellos()
         comprobar_buenas_ellos()
     }
