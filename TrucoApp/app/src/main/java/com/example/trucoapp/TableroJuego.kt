@@ -28,32 +28,20 @@ class TableroJuego : AppCompatActivity() {
     }
 
     private fun limpiar_tablero_ellos() {
+
         vista.image11.setImageResource(R.drawable.ic_tantos_vacio)
         vista.image12.setImageResource(R.drawable.ic_tantos_vacio)
         vista.image13.setImageResource(R.drawable.ic_tantos_vacio)
     }
 
     private fun limpiar_tablero_nosotros() {
+
         vista.image21.setImageResource(R.drawable.ic_tantos_vacio)
         vista.image22.setImageResource(R.drawable.ic_tantos_vacio)
         vista.image23.setImageResource(R.drawable.ic_tantos_vacio)
     }
 
     private fun nosotros() {
-
-        if (puntajeGeneralNosotros==15) {
-            buenasNosotros += 1
-            vista.idnosotros.text = "Nosotros estamos en buenas"
-            puntajeGeneralNosotros = 0
-            puntajeNosotros = 0
-            limpiar_tablero_nosotros()
-        }
-
-        if (buenasNosotros == 2) {
-            vista.idnosotros.text = "Ganamos nosotros"
-            vista.mas1.isEnabled = false
-            vista.mas2.isEnabled = false
-        }
 
         puntajeGeneralNosotros += 1
 
@@ -66,8 +54,6 @@ class TableroJuego : AppCompatActivity() {
         if(puntajeGeneralNosotros in 10..15){
             responder_click_nosotros(vista.image23)
         }
-
-
     }
 
     private fun responder_click_nosotros(parametro: ImageView) {
@@ -85,6 +71,26 @@ class TableroJuego : AppCompatActivity() {
         }
         parametro.setImageResource(recursoImg)
 
+        comprobar_tantos_nosotros()
+        comprobar_buenas_nosotros()
+    }
+
+    private fun comprobar_buenas_nosotros() {
+        if (buenasNosotros == 2) {
+            vista.idnosotros.text = "Ganamos nosotros"
+            vista.mas1.isEnabled = false
+            vista.mas2.isEnabled = false
+        }
+    }
+
+    private fun comprobar_tantos_nosotros() {
+        if (puntajeGeneralNosotros==15) {
+            buenasNosotros += 1
+            vista.idnosotros.text = "Nosotros estamos en buenas"
+            puntajeGeneralNosotros = 0
+            puntajeNosotros = 0
+            limpiar_tablero_nosotros()
+        }
     }
 
     private fun ellos(){
@@ -116,18 +122,25 @@ class TableroJuego : AppCompatActivity() {
         }
         parametro.setImageResource(recursoImg)
 
+        comprobar_tantos_ellos()
+        comprobar_buenas_ellos()
+    }
+
+    private fun comprobar_buenas_ellos() {
+        if (buenasEllos == 2) {
+            vista.idellos.text = "Ganaron ellos"
+            vista.mas1.isEnabled = false
+            vista.mas2.isEnabled = false
+        }
+    }
+
+    private fun comprobar_tantos_ellos() {
         if (puntajeGeneralEllos==15) {
             buenasEllos += 1
             vista.idellos.text = "Ellos están en buenas"
             puntajeGeneralEllos = 0
             puntajeEllos = 0
             limpiar_tablero_ellos()
-        }
-
-        if (buenasEllos == 2) {
-            vista.idellos.text = "Ganaron ellos"
-            vista.mas1.isEnabled = false
-            vista.mas2.isEnabled = false
         }
     }
 }
