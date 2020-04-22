@@ -3,6 +3,7 @@ package com.example.trucoapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import com.example.trucoapp.databinding.TableroJuegoBinding
 
@@ -18,13 +19,18 @@ class TableroJuego : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         vista = TableroJuegoBinding.inflate(layoutInflater)
         val view = vista.root
         setContentView(view)
 
+        vista.botonContinuar.visibility= View.INVISIBLE
         vista.mas1.setOnClickListener { ellos() }
         vista.mas2.setOnClickListener { nosotros() }
+    }
+
+    private fun juego_terminado(){
+        val intent = Intent(this, JuegoGanado::class.java)
+        startActivity(intent)
     }
 
     private fun limpiar_tablero_ellos() {
@@ -79,6 +85,8 @@ class TableroJuego : AppCompatActivity() {
             vista.idnosotros.text = "Ganamos nosotros"
             vista.mas1.isEnabled = false
             vista.mas2.isEnabled = false
+            vista.botonContinuar.visibility= View.VISIBLE
+            vista.botonContinuar.setOnClickListener { juego_terminado() }
         }
     }
 
@@ -129,6 +137,8 @@ class TableroJuego : AppCompatActivity() {
             vista.idellos.text = "Ganaron ellos"
             vista.mas1.isEnabled = false
             vista.mas2.isEnabled = false
+            vista.botonContinuar.visibility= View.VISIBLE
+            vista.botonContinuar.setOnClickListener { juego_terminado() }
         }
     }
 

@@ -12,4 +12,7 @@
     <string name="descripcion4">puntos21</string>
     <string name="descripcion5">puntos22</string>
     <string name="descripcion6">puntos23</string>
+    <string name="boton_continuar">Continuar</string>
+    <string name="titulo_jganado">Resultados Anteriores</string>
+    <string name="jugar_again">Jugar de Nuevo</string>
 </resources>
