@@ -10,6 +10,8 @@ import com.example.trucoapp.databinding.TableroJuegoBinding
 class TableroJuego : AppCompatActivity() {
 
     private lateinit var vista: TableroJuegoBinding
+    private lateinit var jugadasEllos: IntArray
+    private lateinit var jugadasNosotros: IntArray
     private var puntajeGeneralEllos = 0
     private var puntajeGeneralNosotros: Int = 0
     private var puntajeEllos:Int = 0
@@ -17,21 +19,26 @@ class TableroJuego : AppCompatActivity() {
     private var buenasEllos: Int = 0
     private var buenasNosotros:Int = 0
 
+    private var iterador: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vista = TableroJuegoBinding.inflate(layoutInflater)
         val view = vista.root
         setContentView(view)
 
+        jugadasEllos = IntArray(4) //guardo las ultimas cuatro jugadas
+        jugadasNosotros = IntArray(4)
+
         vista.botonContinuar.visibility= View.INVISIBLE
         vista.mas1.setOnClickListener { ellos() }
         vista.mas2.setOnClickListener { nosotros() }
 
-        if (savedInstanceState != null){
+        /*if (savedInstanceState != null){
             puntajeGeneralEllos = savedInstanceState.getInt("puntajeGeneralEllos")
             puntajeGeneralNosotros = savedInstanceState.getInt("puntajeGeneralNosotros")
 
-        }
+        }*/
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -47,7 +54,10 @@ class TableroJuego : AppCompatActivity() {
     }
 
     private fun juego_terminado(){
+
         val intent = Intent(this, JuegoGanado::class.java)
+        intent.putExtra("jugadasEllos", jugadasEllos)
+        intent.putExtra("jugadasNosotros", jugadasNosotros)
         startActivity(intent)
     }
 
@@ -104,6 +114,9 @@ class TableroJuego : AppCompatActivity() {
             vista.mas1.isEnabled = false
             vista.mas2.isEnabled = false
             vista.botonContinuar.visibility= View.VISIBLE
+            iterador += 1
+            //jugadasEllos.set(iterador,puntajeGeneralEllos)
+            //jugadasNosotros.set(iterador,puntajeGeneralNosotros)
             vista.botonContinuar.setOnClickListener { juego_terminado() }
         }
     }
@@ -156,6 +169,9 @@ class TableroJuego : AppCompatActivity() {
             vista.mas1.isEnabled = false
             vista.mas2.isEnabled = false
             vista.botonContinuar.visibility= View.VISIBLE
+            iterador += 1
+            //jugadasEllos.set(iterador,puntajeGeneralEllos)
+            //jugadasNosotros.set(iterador,puntajeGeneralNosotros)
             vista.botonContinuar.setOnClickListener { juego_terminado() }
         }
     }

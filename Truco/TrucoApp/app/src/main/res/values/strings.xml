@@ -15,4 +15,7 @@
     <string name="boton_continuar">Continuar</string>
     <string name="titulo_jganado">Resultados Anteriores</string>
     <string name="jugar_again">Jugar de Nuevo</string>
+    <string name="vacio" />
+    <string name="cabeceraE">Ellos</string>
+    <string name="cabeceraN">Nosotros</string>
 </resources>

@@ -34,4 +34,63 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="215dp"
+        android:layout_height="306dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/boton_jugaragain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_jganado">
+
+        <TableRow android:gravity="start|end">
+            <TextView
+                android:id="@+id/cabeceraEllos"
+                android:padding="3dip"
+                android:text="@string/cabeceraE" />
+
+            <TextView
+                android:id="@+id/cabeceraNosotros"
+                android:gravity="start|end"
+                android:padding="3dip"
+                android:text="@string/cabeceraN" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/ellos1"
+                android:layout_width="79dp"
+                android:layout_height="match_parent"
+                android:padding="3dip"
+                android:text="@string/vacio" />
+
+            <TextView
+                android:id="@+id/nosotros1"
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:gravity="start|end"
+                android:padding="3dip"
+                android:text="@string/vacio" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/ellos2"
+                android:padding="3dip"
+                android:text="@string/vacio" />
+
+            <TextView
+                android:id="@+id/nosotros2"
+                android:gravity="start|end"
+                android:padding="3dip"
+                android:text="@string/vacio" />
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
