@@ -1,2 +1,2 @@
-# TNTAppTruco
-Aplicación para llevar el puntaje del Truco hecha en Andriod Studio
+# TNT
+Repositorio para la materia Taller de Nuevas Tecnologias
