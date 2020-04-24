@@ -9,22 +9,25 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class AdapterAlbun (var list: ArrayList<Album>): RecyclerView.Adapter<AdapterAlbun.ViewHolder>(){
+//clase adaptador para recibir los datos
+class AdapterSerie (var list: ArrayList<Serie>): RecyclerView.Adapter<AdapterSerie.ViewHolder>(){
+    //clase para manejar nuestra vista
+    class ViewHolder(view: View): RecyclerView.ViewHolder(view){ //el view que vamos agregar dentro de este es el view que recibimos en la clase viewHolder
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view){ //manejar nuestra vista
-
-        fun bindItems (data: Album){
+        //recibimos lo datos que se agregan dentro de nuestra vista
+        fun bindItems (data: Serie){
+            //variables para nuestras vistas
             val title: TextView = itemView.findViewById(R.id.txtTitle)
-            val count: TextView = itemView.findViewById(R.id.txtCount)
+            val tempo: TextView = itemView.findViewById(R.id.txtTemporadas)
             val thumbnail: ImageView = itemView.findViewById(R.id.thumbnail)
 
             title.text = data.name
-            count.text = data.numOfSongs.toString()
+            tempo.text = data.temporadas.toString()
 
             Glide.with(itemView.context).load(data.thumbnail).into(thumbnail)
 
             itemView.setOnClickListener{
-                Toast.makeText(itemView.context, "Albun de ${data.name}", Toast.LENGTH_LONG).show()
+                Toast.makeText(itemView.context, "Ver ${data.name}", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -39,7 +42,7 @@ class AdapterAlbun (var list: ArrayList<Album>): RecyclerView.Adapter<AdapterAlb
         return list.size
     }
 
-    override fun onBindViewHolder(holder: AdapterAlbun.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterSerie.ViewHolder, position: Int) {
         holder.bindItems(list[position])
     }
 }

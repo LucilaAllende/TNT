@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Listas</string>
+    <string name="descripcionPortada">Imagen de la portada de la serie</string>
+    <string name="descripcionOpciones">Opciones de la lista</string>
 </resources>
