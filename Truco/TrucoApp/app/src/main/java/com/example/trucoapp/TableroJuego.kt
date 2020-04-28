@@ -1,5 +1,6 @@
 package com.example.trucoapp
 
+import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,6 +24,9 @@ class TableroJuego : AppCompatActivity() {
 
     private var iterador: Int = 0
 
+    var v: String? = null
+    var pos: Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vista = TableroJuegoBinding.inflate(layoutInflater)
@@ -32,24 +36,26 @@ class TableroJuego : AppCompatActivity() {
         vista.botonContinuar.visibility= View.INVISIBLE
         vista.mas1.setOnClickListener { ellos() }
         vista.mas2.setOnClickListener { nosotros() }
-
-        /*if (savedInstanceState != null){
-            puntajeEllos = savedInstanceState.getInt("puntajeEllos")
-            puntajeNosotros = savedInstanceState.getInt("puntajeNosotros")
-
-        }*/
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putInt("puntajeEllos", puntajeEllos)
-        outState.putInt("puntajeNosotros", puntajeNosotros)
+    override fun onStop() {
+        super.onStop()
+        val values = ContentValues().apply {
+            put("jugadasEllos", jugadasEllos)
+            put("jugadaNosotros", jugadasNosotros)
+        }
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        puntajeEllos = savedInstanceState.getInt("puntajeEllos")
-        puntajeNosotros = savedInstanceState.getInt("puntajeNosotros")
+    override fun onSaveInstanceState(guardarEstado: Bundle) {
+        super.onSaveInstanceState(guardarEstado)
+        guardarEstado.putIntegerArrayList("jugadasEllos",jugadasEllos)
+        guardarEstado.putIntegerArrayList("jugadasNosotros", jugadasNosotros)
+    }
+
+    override fun onRestoreInstanceState(recEstado: Bundle) {
+        super.onRestoreInstanceState(recEstado)
+        jugadasEllos = recEstado.getIntegerArrayList("jugadasEllos") as ArrayList<Int>
+        jugadasNosotros = recEstado.getIntegerArrayList("jugadasNosotros") as ArrayList<Int>
     }
 
     private fun juego_terminado(){
