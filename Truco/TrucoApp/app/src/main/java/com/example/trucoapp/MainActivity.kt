@@ -1,12 +1,9 @@
 package com.example.trucoapp
 
-import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-
-const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 

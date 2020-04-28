@@ -18,10 +18,10 @@ class JuegoGanado : AppCompatActivity() {
         vista.botonJugaragain.setOnClickListener { jugar_again() }
 
         val intent1: Intent = intent
-        var partidasEllos = intent1.getIntArrayExtra("jugadaEllos")
-        vista.ellos1.text= partidasEllos[1].toString()
-        vista.ellos2.text= partidasEllos[2].toString()
-
+        var partidasEllos = intent1.getIntegerArrayListExtra("jugadasEllos")
+        var partidaNosotros = intent1.getIntegerArrayListExtra("jugadasNosotros")
+        vista.ellos1.text= partidasEllos.first().toString()
+        vista.nosotros1.text=partidaNosotros.first().toString()
 
     }
 
