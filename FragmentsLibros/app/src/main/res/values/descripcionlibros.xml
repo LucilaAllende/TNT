@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    TODO #3.1: Recurso xml descripciones -->
+<resources>
+    <string-array name="descripcioneslibros">
+        <item>
+            •El azul es el color del cielo y del mar, por lo que se suele asociar con la estabilidad y la profundidad.
+            •Representa la lealtad, la confianza, la sabiduría, la inteligencia, la fe, la verdad y el cielo eterno.
+            •Se le considera un color beneficioso tanto para el cuerpo como para la mente. Retarda el metabolismo y produce un efecto relajante. Es un color fuertemente ligado a la tranquilidad y la calma.
+        </item>
+        <item>
+            El rosa es un color emocionalmente relajado e influye en los sentimientos convirtiéndolos en amables, suaves y profundos.
+            Nos hace sentir cariño, amor y protección. También nos aleja de la soledad y nos convierte en personas sensibles.
+            Así como el rojo refleja más la parte sexual, el rosa se asocia al amor altruista y verdadero.
+            El color rosa está asociado al signo Libra.
+            Las palabras claves del color rosa son: inocencia, amor, entrega total, ayudar al prójimo.
+        </item>
+        <item>
+        •El color rojo es el del fuego y el de la sangre, por lo que se le asocia al peligro, la guerra, la energía, la fortaleza, la determinación, así como a la pasión, al deseo y al amor.
+        •Es un color muy intenso a nivel emocional. Mejora el metabolismo humano, aumenta el ritmo respiratorio y eleva la presión sanguínea.
+        •Tiene una visibilidad muy alta, por lo que se suele utilizar en avisos importantes, prohibiciones y llamadas de precaución.
+        </item>
+    </string-array>
+</resources>
