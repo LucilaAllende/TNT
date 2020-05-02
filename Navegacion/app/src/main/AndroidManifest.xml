@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="unpsjb.ing.dit.tnt.navigationapp">
+    package="com.example.navegacion">
 
     <application
         android:allowBackup="true"
