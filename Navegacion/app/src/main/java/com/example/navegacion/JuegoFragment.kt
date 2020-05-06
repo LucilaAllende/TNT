@@ -32,10 +32,23 @@ class JuegoFragment : Fragment() {
     ): View? {
         _binding = FragmentJuegoBinding.inflate(inflater, container, false)
         val vista = binding.root
+
+        restaurarValores(savedInstanceState)
+
         binding.countdow1Button.setOnClickListener {disminuirEq1()}
         binding.countdow2Button.setOnClickListener{disminuirEq2()}
 
         return vista
+    }
+
+    private fun restaurarValores(savedInstanceState: Bundle?) {
+        if (savedInstanceState != null){
+            this.puntajeE1 = savedInstanceState.getInt("puntajeE1")
+            this.puntajeE2 = savedInstanceState.getInt("puntajeE2")
+
+            binding.countdow1TextView.text = puntajeE1.toString()
+            binding.countdow2TextView.text= puntajeE2.toString()
+        }
     }
 
     private fun disminuirEq1() {
@@ -60,5 +73,11 @@ class JuegoFragment : Fragment() {
                 Navigation.createNavigateOnClickListener(R.id.action_juegoFragment_to_finalFragmentE2, null)
             )
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("puntajeE1", puntajeE1)
+        outState.putInt("puntajeE2", puntajeE2)
     }
 }

@@ -19,4 +19,10 @@ class FinalFragmentE1 : Fragment() {
         return inflater.inflate(R.layout.fragment_final_e1, container, false)
     }
 
+
+    /*val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
+        // Handle the back button event
+    }*/
+
+
 }

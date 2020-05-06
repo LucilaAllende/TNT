@@ -11,4 +11,6 @@
     <string name="bottom_desc_text">Restantes</string>
     <string name="countdown_button_text">-1</string>
     <string name="hello_final_fragment">¿Jugar de nuevo?</string>
+    <string name="ganador_e2">Gano el equipo 2</string>
+    <string name="ganador_e1">Gano el equipo 1</string>
 </resources>
