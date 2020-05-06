@@ -24,39 +24,68 @@ class TableroJuego : AppCompatActivity() {
 
     private var iterador: Int = 0
 
-    var v: String? = null
-    var pos: Int = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         vista = TableroJuegoBinding.inflate(layoutInflater)
         val view = vista.root
         setContentView(view)
 
+        restaurarVariables(savedInstanceState)
+
         vista.botonContinuar.visibility= View.INVISIBLE
         vista.mas1.setOnClickListener { ellos() }
         vista.mas2.setOnClickListener { nosotros() }
     }
 
-    override fun onStop() {
+    private fun restaurarVariables(savedInstanceState: Bundle?) {
+        if (savedInstanceState != null){
+            this.jugadasEllos = savedInstanceState.getIntegerArrayList("jugadasEllos") as ArrayList<Int>
+            this.jugadasNosotros = savedInstanceState.getIntegerArrayList("jugadasNosotros") as ArrayList<Int>
+
+            this.puntajeGeneralEllos = savedInstanceState.getInt("puntajeGeneralEllos")
+            this.puntajeGeneralNosotros = savedInstanceState.getInt("puntajeGeneralNosotros")
+            this.puntajeEllos = savedInstanceState.getInt("puntajeEllos")
+            this.puntajeNosotros = savedInstanceState.getInt("puntajeNosotros")
+            this.indiceEllos = savedInstanceState.getInt("indiceEllos")
+            this.indiceNosotros = savedInstanceState.getInt("indiceNosotros")
+            this.buenasEllos = savedInstanceState.getInt("buenasEllos")
+            this.buenasNosotros = savedInstanceState.getInt("buenasNosotros")
+            this.iterador = savedInstanceState.getInt("iterador")
+        }
+    }
+
+/*    override fun onStop() {
         super.onStop()
         val values = ContentValues().apply {
             put("jugadasEllos", jugadasEllos)
             put("jugadaNosotros", jugadasNosotros)
         }
-    }
+    }*/
 
     override fun onSaveInstanceState(guardarEstado: Bundle) {
         super.onSaveInstanceState(guardarEstado)
+        //Para ver si logro hacer el historial
         guardarEstado.putIntegerArrayList("jugadasEllos",jugadasEllos)
         guardarEstado.putIntegerArrayList("jugadasNosotros", jugadasNosotros)
+
+        //Para cuando giro la pantalla en medio del juego
+        guardarEstado.putInt("puntajeGeneralEllos", puntajeGeneralEllos)
+        guardarEstado.putInt("puntajeGeneralNosotros", puntajeGeneralNosotros)
+        guardarEstado.putInt("puntajeEllos", puntajeEllos)
+        guardarEstado.putInt("puntajeNosotros", puntajeNosotros)
+        guardarEstado.putInt("indiceEllos", indiceEllos)
+        guardarEstado.putInt("indiceNosotros", indiceNosotros)
+        guardarEstado.putInt("buenasEllos", buenasEllos)
+        guardarEstado.putInt("buenasNosotros", buenasNosotros)
+        guardarEstado.putInt("iterador", iterador)
+
     }
 
-    override fun onRestoreInstanceState(recEstado: Bundle) {
+/*    override fun onRestoreInstanceState(recEstado: Bundle) {
         super.onRestoreInstanceState(recEstado)
         jugadasEllos = recEstado.getIntegerArrayList("jugadasEllos") as ArrayList<Int>
         jugadasNosotros = recEstado.getIntegerArrayList("jugadasNosotros") as ArrayList<Int>
-    }
+    }*/
 
     private fun juego_terminado(){
 
