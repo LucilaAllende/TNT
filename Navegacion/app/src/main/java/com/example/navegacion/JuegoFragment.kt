@@ -5,55 +5,60 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+import androidx.core.view.isVisible
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
+import com.example.navegacion.databinding.FragmentJuegoBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [JuegoFragment.newInstance] factory method to
- * create an instance of this fragment.
  */
 class JuegoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private var _binding: FragmentJuegoBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
+    private var puntajeE1: Int = 10
+    private var puntajeE2: Int = 10
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        _binding = FragmentJuegoBinding.inflate(inflater, container, false)
+        val vista = binding.root
+        binding.countdow1Button.setOnClickListener {disminuirEq1()}
+        binding.countdow2Button.setOnClickListener{disminuirEq2()}
+
+        return vista
+    }
+
+    private fun disminuirEq1() {
+        puntajeE1 -= 1
+        binding.countdow1TextView.text = puntajeE1.toString()
+        if (puntajeE1 == 0){
+            binding.countdow1Button.isEnabled=false
+            binding.juegoButton.visibility = View.VISIBLE
+            binding.juegoButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_juegoFragment_to_finalFragmentE1, null)
+            )
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_juego, container, false)
-    }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment JuegoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            JuegoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun disminuirEq2(){
+        puntajeE2 -= 1
+        binding.countdow2TextView.text= puntajeE2.toString()
+        if (puntajeE2 == 0){
+            binding.countdow2Button.isEnabled=false
+            binding.juegoButton.visibility = View.VISIBLE
+            binding.juegoButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_juegoFragment_to_finalFragmentE2, null)
+            )
+        }
     }
 }

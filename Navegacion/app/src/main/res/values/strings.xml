@@ -3,4 +3,12 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_portada_fragment">Iniciar</string>
+    <string name="boton_iniciar">Inicio</string>
+    <string name="text_button_siguiente">SIGUIENTE</string>
+    <string name="titulo_juego">Equipos</string>
+    <string name="countdow_inital_text">10</string>
+    <string name="bottom_desc_text">Restantes</string>
+    <string name="countdown_button_text">-1</string>
+    <string name="hello_final_fragment">¿Jugar de nuevo?</string>
 </resources>

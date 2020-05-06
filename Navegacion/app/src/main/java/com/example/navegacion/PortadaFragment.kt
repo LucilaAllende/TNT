@@ -6,15 +6,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
 import com.example.navegacion.databinding.FragmentPortadaBinding
 
 /**
  * A simple [Fragment] subclass.
- * Use the [PortadaFragment.newInstance] factory method to
- * create an instance of this fragment.
  */
 class PortadaFragment : Fragment() {
+
     private var _binding: FragmentPortadaBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -45,19 +45,13 @@ class PortadaFragment : Fragment() {
                 popExit = R.anim.slide_out_right
             }
         }
-        findNavController().navigate(R.id.juego_dest, null, options)
-        /*
-        * public void navigate (int resId,
-            Bundle args,
-            NavOptions navOptions,
-            Navigator.Extras navigatorExtras)
-        *
-        * https://developer.android.com/reference/androidx/navigation/NavController?hl=es-419#navigate(androidx.navigation.NavDirections)
-        * */
+        findNavController().navigate(R.id.juegoFragment, null, options)
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

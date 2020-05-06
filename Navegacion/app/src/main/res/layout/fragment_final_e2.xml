@@ -5,7 +5,7 @@
     android:id="@+id/layoutfinale1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1B5E20"
+    android:background="#880E4F"
     tools:context=".FinalFragmentE1">
 
 

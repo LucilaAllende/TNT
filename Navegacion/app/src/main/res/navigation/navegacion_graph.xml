@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion_graph"
+    app:startDestination="@id/portadaFragment">
+    <fragment
+        android:id="@+id/portadaFragment"
+        android:name="com.example.navegacion.PortadaFragment"
+        android:label="fragment_portada"
+        tools:layout="@layout/fragment_portada" >
+        <action
+            android:id="@+id/action_portadaFragment_to_juegoFragment"
+            app:destination="@id/juegoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoFragment"
+        android:name="com.example.navegacion.JuegoFragment"
+        android:label="fragment_juego"
+        tools:layout="@layout/fragment_juego" >
+        <action
+            android:id="@+id/action_juegoFragment_to_finalFragmentE1"
+            app:destination="@id/finalFragmentE1" />
+        <action
+            android:id="@+id/action_juegoFragment_to_finalFragmentE2"
+            app:destination="@id/finalFragmentE2" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalFragmentE1"
+        android:name="com.example.navegacion.FinalFragmentE1"
+        android:label="fragment_final_e1"
+        tools:layout="@layout/fragment_final_e1" />
+    <fragment
+        android:id="@+id/finalFragmentE2"
+        android:name="com.example.navegacion.FinalFragmentE2"
+        android:label="fragment_final_e2"
+        tools:layout="@layout/fragment_final_e2" />
+</navigation>
