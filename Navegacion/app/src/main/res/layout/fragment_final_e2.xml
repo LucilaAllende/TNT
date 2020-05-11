@@ -10,26 +10,26 @@
 
 
     <TextView
-        android:id="@+id/titulo_final"
+        android:id="@+id/puntaje_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_final_fragment"
+        android:text="@string/ganador_e2"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/puntaje_textView"
+        app:layout_constraintBottom_toTopOf="@+id/button_jugar_again"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/puntaje_textView"
+    <Button
+        android:id="@+id/button_jugar_again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ganador_e2"
-        android:textSize="24sp"
+        android:text="@string/boton_jugar_again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titulo_final" />
+        app:layout_constraintTop_toBottomOf="@+id/puntaje_textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

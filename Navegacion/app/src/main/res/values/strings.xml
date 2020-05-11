@@ -13,4 +13,5 @@
     <string name="hello_final_fragment">¿Jugar de nuevo?</string>
     <string name="ganador_e2">Gano el equipo 2</string>
     <string name="ganador_e1">Gano el equipo 1</string>
+    <string name="boton_jugar_again">Jugar de Nuevo</string>
 </resources>

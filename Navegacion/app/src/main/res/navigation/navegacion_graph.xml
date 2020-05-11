@@ -20,10 +20,12 @@
         tools:layout="@layout/fragment_juego" >
         <action
             android:id="@+id/action_juegoFragment_to_finalFragmentE1"
-            app:destination="@id/finalFragmentE1" />
+            app:destination="@id/finalFragmentE1"
+            app:popUpTo="@id/portadaFragment" />
         <action
             android:id="@+id/action_juegoFragment_to_finalFragmentE2"
-            app:destination="@id/finalFragmentE2" />
+            app:destination="@id/finalFragmentE2"
+            app:popUpTo="@id/portadaFragment" />
     </fragment>
     <fragment
         android:id="@+id/finalFragmentE1"

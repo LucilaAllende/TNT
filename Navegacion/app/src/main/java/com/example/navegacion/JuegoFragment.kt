@@ -56,6 +56,7 @@ class JuegoFragment : Fragment() {
         binding.countdow1TextView.text = puntajeE1.toString()
         if (puntajeE1 == 0){
             binding.countdow1Button.isEnabled=false
+            binding.countdow2Button.isEnabled=false
             binding.juegoButton.visibility = View.VISIBLE
             binding.juegoButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(R.id.action_juegoFragment_to_finalFragmentE1, null)
@@ -67,6 +68,7 @@ class JuegoFragment : Fragment() {
         puntajeE2 -= 1
         binding.countdow2TextView.text= puntajeE2.toString()
         if (puntajeE2 == 0){
+            binding.countdow1Button.isEnabled=false
             binding.countdow2Button.isEnabled=false
             binding.juegoButton.visibility = View.VISIBLE
             binding.juegoButton.setOnClickListener(
