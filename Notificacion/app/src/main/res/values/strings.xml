@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppNotificacion</string>
+    <string name="pomodoro_notification_channel_id">pomodoro_channel</string>
+    <string name="pomodoro_notification_channel_name">Pomodoro</string>
+    <string name="pomodoro_notification_channel_description">Canal del recordatorio pomodoro</string>
+    <string name="titulo_notificacion">Pomodoro</string>
+    <string name="texto_boton_lanzar">Lanzar notificación</string>
+    <string name="alarma_pomodoro">Alarma Pomodoro</string>
+    <string name="sesion_ready">Sesion terminada</string>
+
+    <string name="egg_prompt">How do you like your egg?</string>
+</resources>
