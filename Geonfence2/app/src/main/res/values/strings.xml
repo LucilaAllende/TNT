@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Geonfence2</string>
+    <string name="clear_geofence">Clear Geofence</string>
+    <string name="create_geofence">Create Geofence</string>
+</resources>
