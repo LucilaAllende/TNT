@@ -1,7 +1,8 @@
 package com.example.geofencingcopia
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
 
 // TODO #1 Crear un empty activity
 class MainActivity : AppCompatActivity() {
